@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficas Independientes</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <link rel="stylesheet" href="modelo.css">
+    <style>
+        #numeroGrafica {
+            width: 100%;
+            height: 1vh;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../index.html"><h1>Black Scholes</h1></a>
+    </header>
+
+    <main>
+        <div>
+            <form id="formulario">
+                <h2>Formulario</h2>
+                <input type="text" id="precio-inicial" name="precio-inicial" placeholder="Precio activo subyacente" required>
+                <input type="text" id="precio-ejercicio" name="precio-ejercicio" placeholder="Precio de ejercicio" required>
+                <input type="text" id="tasa-interes" name="tasa-interes" placeholder="Tasa de interés libre" required>
+                <input type="text" id="volatilidad-activo" name="volatilidad-activo" placeholder="Volatilidad del activo" required>
+                <input type="text" id="tiempo" name="tiempo" placeholder="Tiempo hasta la expiración" required>
+                <select id="opciones" name="opciones">
+                    <option value="venta">Venta</option>
+                    <option value="compra">Compra</option>
+                    <option value="ambas">Compra/Venta</option>
+                </select>
+                <button type="submit" id="enviar">Enviar</button>
+            </form>
+        </div>
+        <div>
+            <div id="contenedor-grafico">
+                <canvas id="grafico"></canvas>
+            </div>
+        
+            <form id="regla">
+                <input type="range" id="numeroGrafica" name="numeroGrafica" min="0" max="150" value="0" oninput="actualizarGrafico()">
+            </form>
+        </div>
+    </main>
+
+    <script src="modelo.js"></script>
+</body>
+</html>
+
+
