@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function black_scholes(tipo_opcion, S0, K, r, sigma, T) {
-    fetch('http://localhost:5000/modelo-black-scholes', {
+    fetch('https://backend-black-scholes-3.vercel.app/modelo-black-scholes', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
