@@ -31,4 +31,9 @@ button {
     background-color: #4CCD99;
     border: .5px solid white;
 }
+
+button:hover {
+    background-color: white;
+    color: black
+}
  
