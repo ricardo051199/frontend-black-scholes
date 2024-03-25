@@ -3,3 +3,8 @@ main {
     background-color: #333333;
     min-height: 85vh;
 }
+
+button:hover {
+    background-color: white;
+    color: black;
+}
